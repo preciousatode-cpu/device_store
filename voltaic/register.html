@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voltaic — Create account</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="auth-screen">
+    <aside class="auth-side">
+      <a class="brand" href="index.html"><span class="brand-dot"></span>Voltaic</a>
+      <div class="auth-side-copy">
+        <h2>Create your account.</h2>
+        <p>Free, takes a few seconds, and gets you faster checkout and order tracking next time.</p>
+      </div>
+      <div class="auth-side-foot">Already have an account? <a href="login.html" style="color:var(--accent);text-decoration:none;">Sign in</a>.</div>
+    </aside>
+
+    <main class="auth-form-side">
+      <div class="auth-card">
+        <h1>Create account</h1>
+        <p class="sub">Join Voltaic in under a minute.</p>
+
+        <form id="registerForm" novalidate>
+          <label class="field">
+            <span>Full name</span>
+            <input type="text" id="regName" autocomplete="name" placeholder="Your name" required>
+            <span class="err" id="err-regName"></span>
+          </label>
+
+          <label class="field">
+            <span>Email</span>
+            <input type="email" id="regEmail" autocomplete="email" placeholder="you@example.com" required>
+            <span class="err" id="err-regEmail"></span>
+          </label>
+
+          <label class="field">
+            <span>Password</span>
+            <div class="pw-wrap">
+              <input type="password" id="regPassword" autocomplete="new-password" placeholder="At least 8 characters" required>
+              <button type="button" class="pw-toggle" data-target="regPassword">Show</button>
+            </div>
+            <div class="pw-meter" id="pwMeter"><span></span></div>
+            <span class="err" id="err-regPassword"></span>
+          </label>
+
+          <label class="field">
+            <span>Confirm password</span>
+            <div class="pw-wrap">
+              <input type="password" id="regPassword2" autocomplete="new-password" placeholder="Type it again" required>
+              <button type="button" class="pw-toggle" data-target="regPassword2">Show</button>
+            </div>
+            <span class="err" id="err-regPassword2"></span>
+          </label>
+
+          <button type="submit" class="btn-primary btn-block">Create account</button>
+          <p class="form-msg" id="registerMsg" role="status"></p>
+        </form>
+
+        <p class="switch">Already have an account? <a href="login.html">Sign in</a></p>
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="assets/app.js"></script>
+  <script>Voltaic.initRegisterPage();</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voltaic — Sign in</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <div class="auth-screen">
+    <aside class="auth-side">
+      <a class="brand" href="index.html"><span class="brand-dot"></span>Voltaic</a>
+      <div class="auth-side-copy">
+        <h2>Good to see you again.</h2>
+        <p>Sign in to pick up where you left off — orders, saved specs, and your chat history with us.</p>
+      </div>
+      <div class="auth-side-foot">Need something? <a href="whatsapp.html" style="color:var(--accent);text-decoration:none;">Chat with us on WhatsApp</a>.</div>
+    </aside>
+
+    <main class="auth-form-side">
+      <div class="auth-card">
+        <h1>Sign in</h1>
+        <p class="sub">Welcome back to Voltaic.</p>
+
+        <form id="loginForm" novalidate>
+          <label class="field">
+            <span>Email</span>
+            <input type="email" id="loginEmail" autocomplete="email" placeholder="you@example.com" required>
+            <span class="err" id="err-loginEmail"></span>
+          </label>
+
+          <label class="field">
+            <span>Password</span>
+            <div class="pw-wrap">
+              <input type="password" id="loginPassword" autocomplete="current-password" placeholder="Your password" required>
+              <button type="button" class="pw-toggle" data-target="loginPassword">Show</button>
+            </div>
+            <span class="err" id="err-loginPassword"></span>
+          </label>
+
+          <button type="submit" class="btn-primary btn-block">Sign in</button>
+          <p class="form-msg" id="loginMsg" role="status"></p>
+        </form>
+
+        <p class="switch">No account yet? <a href="register.html">Create one</a></p>
+      </div>
+    </main>
+  </div>
+
+  <div class="toast" id="toast"></div>
+  <script src="assets/app.js"></script>
+  <script>Voltaic.initLoginPage();</script>
+</body>
+</html>

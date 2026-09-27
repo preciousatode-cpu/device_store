@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Voltaic — Shop</title>
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html"><span class="brand-dot"></span>Voltaic</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html" class="active">Shop</a></li>
+        <li><a href="whatsapp.html">Chat with us</a></li>
+      </ul>
+      <div class="nav-auth" data-nav-auth></div>
+    </div>
+  </nav>
+
+  <section class="section" style="padding-top:48px;">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>All products</h2>
+      </div>
+      <div class="filter-row">
+        <button class="filter-chip active" data-filter="All">All</button>
+        <button class="filter-chip" data-filter="Audio">Audio</button>
+        <button class="filter-chip" data-filter="Wearables">Wearables</button>
+        <button class="filter-chip" data-filter="Computing">Computing</button>
+        <button class="filter-chip" data-filter="Photography">Photography</button>
+      </div>
+      <div class="product-grid" data-product-grid></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap footer" style="border:none;margin:0;padding:0 0 40px;">
+      <span>© 2026 Voltaic. Demo store — no real payments.</span>
+      <span><a href="whatsapp.html" style="color:var(--muted);text-decoration:none;">Need help? Chat with us</a></span>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast"></div>
+  <script src="assets/app.js"></script>
+  <script>Voltaic.initProductsPage();</script>
+</body>
+</html>
